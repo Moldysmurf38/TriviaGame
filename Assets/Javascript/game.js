@@ -8,7 +8,7 @@ $(function () {
 
    // Close the modal When the user clicks on the button 
    $("#startBtn").on("click", function () {
-      var timeleft = 120;
+      var timeleft = 180;
       var countdownTimer = setInterval(function () {
          $("#time-left").html(timeleft + " seconds");
          timeleft -= 1;
@@ -160,70 +160,20 @@ $(function () {
             wrong++;
             $("#wrong-total").html(wrong);
          }
-         function onPopupOpen() {
-            $("#modal-content").show();
-            $("#correct-total").html("Total Correct: " + correct)
-            $("#wrong-total").html("Total Incorrect: " + wrong)
-         }
-         finalpage(function () { 
-            $.colorbox({
-               inline: true,
-               href: "#modal-content",
-               className: "final-page",
-               oncomplete: onPopupOpen,
-             });
-         })
+         finalPage()
 
-      }, 6000)
+      }, 180000)
    })
 });
 
-$(".clear-cookie").on("click", function() {
-   Cookies.remove('colorboxShown');
-   $(this).replaceWith("<p><em>Cookie cleared. Re-run demo</em></p>");
- });
- 
- $(".order-cheezburger").on("click", function() {
-   $.colorbox.close();
- });
- 
- function onPopupOpen() {
+
+function displayResults() {
    $("#modal-content").show();
-   $("#yurEmail").focus();
- }
- 
- function onPopupClose() {
-   $("#modal-content").hide();
-   Cookies.set('colorboxShown', 'yes', {
-     expires: 1
-   });
-   $(".clear-cookie").fadeIn();
-   lastFocus.focus();
- }
- 
- function displayPopup() {
-   $.colorbox({
-     inline: true,
-     href: "#modal-content",
-     className: "cta",
-     width: 600,
-     height: 350,
-     onComplete: onPopupOpen,
-     onClosed: onPopupClose
-   });
- }
- 
- var lastFocus;
- var popupShown = Cookies.get('colorboxShown');
- 
- if (popupShown) {
-   console.log("Cookie found. No action necessary");
-   $(".clear-cookie").show();
- } else {
-   console.log("No cookie found. Opening popup in 3 seconds");
-   $(".clear-cookie").hide();
-   setTimeout(function() {
-     lastFocus = document.activeElement;
-     displayPopup();
-   }, 3000);
- }
+   $("#correct-total").html("Total Correct: " + correct)
+   $("#wrong-total").html("Total Incorrect: " + wrong)
+}
+
+function finalPage() {
+   document.getElementById("modal-content").style.visibility='visible'
+   displayResults()
+}
