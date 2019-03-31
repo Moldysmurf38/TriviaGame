@@ -1,0 +1,92 @@
+
+body {
+    background-image: url("../Images/space-background.jpg");
+}
+header {
+    background: black;
+    padding: 10px;
+    margin-right: 100px;
+    margin-left: 100px;
+    border-radius: 5px;
+}
+.container {
+    background: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Audiowide', cursive;
+}
+h1 {
+    text-align: center;
+    color: blue;
+    font-family: 'Orbitron', sans-serif;
+}
+h3 {
+    text-align: center;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+#time-left {
+    text-align: center;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+.question-option {
+    margin-bottom: 30px;
+}
+
+  /* Modal Content/Box */
+  .modal-content {
+    background: black !important;
+    color: white;
+    margin: 15% auto;
+    margin-top: 0px;
+    padding: 20px;
+    border: 1px solid #888;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;;
+  }
+  #modal-title {
+      margin-top: 100px;
+      color: blue;
+      text-align: center;
+      font-size: 50px;
+  }
+  #modal-text {
+      color: white;
+      text-align: center;
+      font-size: 25px;
+  }
+  #startBtn {
+    color: blue;
+    background: white;
+    width: 100px;
+    text-align: center;
+    margin-left: 50%;
+  }
+ 
+  #startBtn:hover {
+    color: white;
+    background: blue;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #modal-content {
+    display: none;
+    background: black !important;
+    color: white;
+    margin: 15% auto;
+    margin-top: 0px;
+    padding: 20px;
+    border: 1px solid #888;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;;
+  }
