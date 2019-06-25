@@ -1,6 +1,9 @@
-
 body {
     background-image: url("../Images/space-background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 header {
     background: black;
@@ -35,63 +38,62 @@ h3 {
 .question-option {
   margin-bottom: 60px;
 }
-
-  /* Modal Content/Box */
-  .modal-content {
-    background: black !important;
-    color: white;
-    margin: 15% auto;
-    margin-top: 0px;
-    padding: 20px;
-    border: 1px solid #888;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 10;;
-  }
-  #modal-title {
-      margin-top: 100px;
-      color: blue;
-      text-align: center;
-      font-size: 50px;
-  }
-  #modal-text {
-      color: white;
-      text-align: center;
-      font-size: 25px;
-  }
-  #startBtn {
+/* Modal Content/Box */
+.modal-content {
+  background: black !important;
+  color: white;
+  margin: 15% auto;
+  margin-top: 0px;
+  padding: 20px;
+  border: 1px solid #888;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+#modal-title {
+    margin-top: 100px;
     color: blue;
-    background: white;
-    width: 100px;
     text-align: center;
-    margin-left: 50%;
-    border-radius: 2px;
-  }
+    font-size: 50px;
+}
+#modal-text {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+#startBtn {
+  color: blue;
+  background: white;
+  width: 100px;
+  text-align: center;
+  margin-left: 50%;
+  border-radius: 2px;
+}
  
-  #startBtn:hover {
-    color: white;
-    background: blue;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  #modal-content {
-    display: none;
-    background: black !important;
-    color: white;
-    margin: 15% auto;
-    margin-top: 0px;
-    padding: 20px;
-    border: 1px solid #888;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 10;;
-  }
+#startBtn:hover {
+  color: white;
+  background: blue;
+  text-decoration: none;
+  cursor: pointer;
+}
+#modal-content {
+  display: none;
+  background: black !important;
+  color: white;
+  margin: 15% auto;
+  margin-top: 0px;
+  padding: 20px;
+  border: 1px solid #888;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;;
+}
 
 #results-title {
   color: blue;
