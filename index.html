@@ -22,32 +22,29 @@
 </head>
 
 <body>
-    <header>
-        <h1>Sci-Fi Movies Trivia Game</h1>
-    </header>
-    <br>
-    <!-- Modal content -->
-
     <div class="container">
-
-            <div class="modal" id="start-modal" tabindex="-1" role="dialog" data-backdrop="static">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title">How much sci-fi do you know?</h5>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container-fluid">
-                                <p id="modal-text">Try to answer all 14 questions correctly before the time runs out!</p>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-outline-primary" id="startBtn">Start
-                                Quiz</button>
-                        </div>
-                      </div>
+        <header>
+            <h1>Sci-Fi Movies Trivia Game</h1>
+        </header>
+        <br>
+        <div class="modal" id="start-modal" tabindex="-1" role="dialog" data-backdrop="static">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">How much sci-fi do you know?</h5>
                     </div>
-                  </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <p id="modal-text">Try to answer all 14 questions correctly before the time runs out!</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-primary" id="startBtn">Start
+                            Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <h3 class="time=-counter">Time remaining: </h3>
         <div id="time-left"></div>
         <br>
@@ -212,26 +209,27 @@
                 Answers!</button>
         </form>
     </div>
-    
+
 
     <div class="modal" id="final-modal" tabindex="-1" role="dialog" data-backdrop="static">
         <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Your Results:</h5>
-            </div>
-            <div class="modal-body">
-                <div class="container-fluid">
-                    <div id="correct-total"></div>
-                    <div id="wrong-total"></div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Your Results:</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div id="correct-total"></div>
+                        <div id="wrong-total"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="index.html"><button class="btn btn-outline-primary" id="restartBtn">Try Again</button></a>
                 </div>
             </div>
-            <div class="modal-footer">
-                <a href="index.html"><button class="btn btn-outline-primary" id="restartBtn">Try Again</button></a>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 </body>
 <script src="Assets/Javascript/game.js"></script>
+
 </html>
