@@ -1,6 +1,12 @@
 // List of variables
 var correct = 0;
 var wrong = 0;
+
+$(window).on('load',function(){
+   $('#start-modal').modal('show');
+   $('<div class="modal-backdrop"></div>').appendTo(document.body)
+});
+
 // Function to initiate and run survey
 $(function () {
    // Close the modal When the user clicks on the button 

@@ -39,46 +39,20 @@ h3 {
   margin-bottom: 60px;
 }
 /* Modal Content/Box */
+
 .modal-content {
-  background: black !important;
-  color: white;
-  margin: 15% auto;
-  margin-top: 0px;
-  padding: 20px;
-  border: 1px solid #888;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 10;
+  background: rgb(0, 0, 0);
 }
-#modal-title {
-    margin-top: 100px;
-    color: blue;
-    text-align: center;
-    font-size: 50px;
-}
-#modal-text {
-    color: white;
-    text-align: center;
-    font-size: 25px;
-}
-#startBtn {
-  color: blue;
-  background: white;
-  width: 100px;
+.modal-title {
+  margin-top: 100px;
+  color: rgb(0, 0, 255);
   text-align: center;
-  margin-left: 50%;
-  border-radius: 2px;
 }
- 
-#startBtn:hover {
+.modal-text {
   color: white;
-  background: blue;
-  text-decoration: none;
-  cursor: pointer;
+  text-align: center;
 }
+
 #modal-content {
   display: none;
   background: black !important;

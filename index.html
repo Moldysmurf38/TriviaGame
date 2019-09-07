@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trivia Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Audiowide|Orbitron" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -16,9 +18,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
-    <title>Trivia Game</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="Assets/CSS/style.css">
 </head>
 
@@ -30,12 +29,25 @@
     <!-- Modal content -->
 
     <div class="container">
-        <div class="modal-content" id="start-page">
-            <p id="modal-title">How much sci-fi do you know?</p>
-            <p id="modal-text">Try to answer all 14 questions correctly before the time runs out!</p>
-            <button id="startBtn" onclick="document.getElementById('start-page').style.display='none'">Start
-                Quiz</button>
-        </div>
+
+            <div class="modal" id="start-modal" tabindex="-1" role="dialog" data-backdrop="static">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">How much sci-fi do you know?</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <p id="modal-text">Try to answer all 14 questions correctly before the time runs out!</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-outline-primary" id="startBtn" onclick="document.getElementById('start-page').style.display='none'">Start
+                                Quiz</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
         <h3 class="time=-counter">Time remaining: </h3>
         <div id="time-left"></div>
         <br>
@@ -200,9 +212,7 @@
                 Answers!</button>
         </form>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="Assets/Javascript/game.js"></script>
+    
     <div id="modal-content">
         <h3 id="results-title">Your Results:</h3>
         <div id="correct-total"></div>
@@ -210,5 +220,5 @@
         <a href="index.html"><button class="restartBtn">Try Again</button> </a>
     </div>
 </body>
-
+<script src="Assets/Javascript/game.js"></script>
 </html>

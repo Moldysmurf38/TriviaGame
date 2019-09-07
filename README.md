@@ -31,6 +31,7 @@ Fun asthetics for results page depending on user's number of correct answers <br
 
 JQuery: https://jquery.com/ <br/>
 Bootstrap: https://getbootstrap.com/ <br/>
+Google Fonts: https://fonts.google.com/
 
 ### **Author(s):**
 
