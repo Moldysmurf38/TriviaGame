@@ -213,12 +213,25 @@
         </form>
     </div>
     
-    <div id="modal-content">
-        <h3 id="results-title">Your Results:</h3>
-        <div id="correct-total"></div>
-        <div id="wrong-total"></div>
-        <a href="index.html"><button class="restartBtn">Try Again</button> </a>
-    </div>
+
+    <div class="modal" id="final-modal" tabindex="-1" role="dialog" data-backdrop="static">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Your Results:</h5>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div id="correct-total"></div>
+                    <div id="wrong-total"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="index.html"><button class="btn btn-outline-primary" id="restartBtn">Try Again</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
 </body>
 <script src="Assets/Javascript/game.js"></script>
 </html>

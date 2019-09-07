@@ -1,21 +1,17 @@
 // List of variables
 var correct = 0;
 var wrong = 0;
-
 $(window).on('load',function(){
    $('#start-modal').modal('show');
    $('<div class="modal-backdrop"></div>').appendTo(document.body)
 });
-
-// Function to initiate and run survey
 $(function () {
-   // Close the modal When the user clicks on the button 
    $("#startBtn").on("click", function () {
       $("#start-modal").css({"display": "none"})
-      $(".modal-backdrop").css({"display": "none"})
+      $(".modal-backdrop").remove();
+      $("body").removeClass("modal-open");
       document.getElementById('start-modal').style.display='none'
       var timeleft = 180;
-      // Displays a countdown of the time left for the quiz.
       var countdownTimer = setInterval(function () {
          $("#time-left").html(timeleft + " seconds");
          timeleft -= 1;
@@ -24,31 +20,27 @@ $(function () {
             $("#time-left").html("Finished");
          };
       }, 1000);
-      // Allows user to submit answers if they finish before time runs out
       $("#question-submit").on("click", function () {
          clearTimeout(quizLength)
          surveyForm();
          finalPage();
       });
-      // Time duration for the quiz
       var quizLength = setTimeout(function () {
          surveyForm();
          finalPage();
       }, 180000)
    });
 });
-// Function that displays the quiz results
 function displayResults() {
-   $("#modal-content").show();
    $("#correct-total").html("Total Correct: " + correct);
    $("#wrong-total").html("Total Incorrect: " + wrong);
+   $("#final-modal").show();
 };
-// Function that displays the final page containing the quiz results
 function finalPage() {
-   document.getElementById("modal-content").style.visibility = 'visible';
+   $("#modal-content").css({"visibility" : "visible"})
+   $('<div class="modal-backdrop"></div>').appendTo(document.body)
    displayResults();
 };
-// Function that takes in user answers and pushes them to an array
 function surveyForm(userAnswers) {
    var userAnswers = [];
    var questionOne = $("#question-0").val();
@@ -70,7 +62,6 @@ function surveyForm(userAnswers) {
       questionFourteen);
    scoreTotal(userAnswers);
 };
-// Function that sorts through the array and looks for correct answers
 function scoreTotal(userAnswers) {
    for (var i = 0; i < userAnswers.length; ++i) {
       if (userAnswers[i] == 0) {
