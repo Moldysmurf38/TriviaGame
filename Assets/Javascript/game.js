@@ -11,6 +11,9 @@ $(window).on('load',function(){
 $(function () {
    // Close the modal When the user clicks on the button 
    $("#startBtn").on("click", function () {
+      $("#start-modal").css({"display": "none"})
+      $(".modal-backdrop").css({"display": "none"})
+      document.getElementById('start-modal').style.display='none'
       var timeleft = 180;
       // Displays a countdown of the time left for the quiz.
       var countdownTimer = setInterval(function () {
